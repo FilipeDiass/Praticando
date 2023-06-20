@@ -21,11 +21,21 @@ for(sal; sal <= 0;){
 }
 alert('Seu salário foi registrado!');
 
-var sexo = String(prompt('Digite o seu sexo (M ou F):'))
-for(sexo; sexo != 'M' || sexo != 'F';){
+
+var sexo = prompt('Digite o seu sexo (M ou F):')
+for(sexo; sexo != 'M' && sexo != 'F';){
     alert('[ERROR] Você digitou as palavras incorretamente.')
     sexo = prompt('Digite o seu sexo (M ou F):')
 }
 alert('Seu sexo foi registrado!');
+
+var civi = prompt('Digite o seu estado civil:');
+for(civi; civi != 's' && civi != 'c' && civi != 'v' && civi != 'd';){
+    alert('[ERROR] Você digitou a palavra incorretamente.\nDigite somente as letras s,c,v ou d.')
+    civi = prompt('Digite o seu estado civil:')
+}
+alert('Seu estado civil foi registrado!');
+
+res.innerHTML = `Nome: ${nome}<br>Idade: ${idade}<br>Salário: ${sal}<br>Sexo: ${sexo}<br>Estado Civil: ${civi}`
 
 
