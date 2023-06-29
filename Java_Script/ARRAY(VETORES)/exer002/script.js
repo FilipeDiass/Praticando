@@ -2,11 +2,13 @@ function bubbleSort(array){
     let tam = array.length
     let aux = 0
 
-    for(let pos = 0; pos <= tam; pos++){
-        if(array[pos] <= array[pos + 1]){
-            aux = array[pos + 1]
-            array[pos + 1] = array[pos]
-            array[pos] = aux
+    for(let per = 0; per < tam - 1; per++){
+        for(let pos = 0; pos < tam - per - 1; pos++){
+            if(array[pos] > array[pos + 1]){
+                aux = array[pos + 1]
+                array[pos + 1] = array[pos]
+                array[pos] = aux
+            }
         }
     }
     return array
