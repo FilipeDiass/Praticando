@@ -44,13 +44,17 @@ const array5 = ['apple', 'banana', 'orange', 'banana', 'grape', 'apple', 'orange
 let aux2 = []
 
 remove = (item, indice) => {
-    for(let i = 0; i < array5.length; i++){
-        if(array[indice] != aux2[i]){
-            aux2.push(item)
-        }
-    }
-
-  
+  if(!aux2.includes(item)){
+    aux2.push(item)
+  }
 }
 array5.forEach(remove)
 console.log(aux2)
+
+//Crie uma função que recebe um array de palavras e usa o forEach para contar a quantidade de caracteres em cada palavra, exibindo o resultado no console.
+const array6 = ['apple', 'banana', 'orange', 'banana', 'grape', 'apple', 'orange']
+
+contar = (item, indice) => {
+    console.log(`Índice ${indice}: ${item.length}`)
+}
+array6.forEach(contar)
